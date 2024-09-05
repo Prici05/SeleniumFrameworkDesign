@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="TestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="ErrorValidations(failed)">
+    <classes>
+      <class name="SeleniumFramework.Ecommerce.ErrorValidations">
+        <methods>
+          <include name="LoginErrorValidations"/>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- SeleniumFramework.Ecommerce.ErrorValidations -->
+    </classes>
+  </test> <!-- ErrorValidations(failed) -->
+  <test thread-count="5" parallel="tests" name="E2ETestcase(failed)">
+    <classes>
+      <class name="SeleniumFramework.Ecommerce.E2Eecommerce2Optimised">
+        <methods>
+          <include name="submitOrderTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- SeleniumFramework.Ecommerce.E2Eecommerce2Optimised -->
+    </classes>
+  </test> <!-- E2ETestcase(failed) -->
+</suite> <!-- Failed suite [Suite] -->
